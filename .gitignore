@@ -1,0 +1,6 @@
+# 安全工具缓存
+.mimosa/
+
+# 系统杂项
+Thumbs.db
+Desktop.ini
