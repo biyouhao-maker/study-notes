@@ -1,0 +1,15 @@
+site_name: 毕游皓的学习笔记
+site_description: Git/开源 · 投资银行 · 大V投资理论 · 交易系统
+site_url: https://biyouhao-maker.github.io/study-notes/
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.top
+    - content.code.copy
+nav:
+  - 首页: index.md
+  - 学习笔记（28 块）: 学习笔记-Git-投行-大V理论.md
+  - 交易系统: 交易系统.md
+  - 精读笔记: 精读笔记-TradingInZone-海龟法则.md
+  - 自测 20 题: 自测20题.md

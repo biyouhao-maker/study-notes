@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  python-syntax:
+    name: Python 语法检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: py_compile（只编译不执行，脚本不触网）
+        run: python -m py_compile backtest_engine_a.py validation_engine_a.py pbo_cscv.py
+
+  markdown-links:
+    name: Markdown 链接检查
+    runs-on: ubuntu-latest
+    continue-on-error: true   # 非阻塞：外链（含中文站点）常有临时抖动，红了不挡合并
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --timeout 20 --max-retries 2 './**/*.md'
+          fail: false
