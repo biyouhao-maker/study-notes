@@ -6,6 +6,19 @@ on:
   pull_request:
 
 jobs:
+  pytest:
+    name: 单元测试（pytest，不触网）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 安装 pytest
+        run: pip install pytest
+      - name: 运行单元测试（合成数据，零网络）
+        run: python -m pytest -q
+
   python-syntax:
     name: Python 语法检查
     runs-on: ubuntu-latest
@@ -15,7 +28,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: py_compile（只编译不执行，脚本不触网）
-        run: python -m py_compile backtest_engine_a.py validation_engine_a.py pbo_cscv.py
+        run: python -m py_compile backtest_engine_a.py validation_engine_a.py pbo_cscv.py quant_data.py quant_core.py
 
   markdown-links:
     name: Markdown 链接检查

@@ -1,5 +1,5 @@
 site_name: 毕游皓的学习笔记
-site_description: Git/开源 · 投资银行 · 大V投资理论 · 交易系统
+site_description: Git/开源 · 投资银行 · 大V投资理论 · 交易系统 · 量化工程 · AI 应用
 site_url: https://biyouhao-maker.github.io/study-notes/
 theme:
   name: material
@@ -13,3 +13,7 @@ nav:
   - 交易系统: 交易系统.md
   - 精读笔记: 精读笔记-TradingInZone-海龟法则.md
   - 自测 20 题: 自测20题.md
+  - 块29 · 量化工程化: 块29-量化工程化.md
+  - 块30 · 因子实证: 块30-因子实证.md
+  - 块31 · 算法刷题起步: 块31-算法刷题起步.md
+  - 块32 · AI 应用开发基础: 块32-AI应用开发基础.md

@@ -4,3 +4,6 @@
 # 系统杂项
 Thumbs.db
 Desktop.ini
+
+# 行情数据本地缓存（可用脚本重新抓取，不入库）
+data/
